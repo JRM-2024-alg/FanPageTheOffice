@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fan Page The Office</title>
+    <link rel="stylesheet" href="css/estilo_principal.css">
+    
 </head>
 <body>
     <header>
-        <h1>Fan Page The Office</h1>
-        <img src="img/bannerTheOffice.jpg" alt="Banner de The Office">
-        <a href="https://www.nbc.com/the-office" target="_blank">Sitio Oficial The Office</a>
+        <div style="display:flex; justify-content:center;">
+            <h1>Fan Page The Office</h1>
+            <a href="https://www.nbc.com/the-office" target="_blank">
+            <img src="img/nuevo_banner.jpg" alt="Banner de The Office" style="width:800px; height:auto;">
+        </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
@@ -17,19 +22,41 @@
                 <li><a href="episodios.html">EPISODIOS</a></li>
             </ul>
         </nav>
+        
+        
     </header>
     <main>
-        <img src="img/fechaEmpleadoMes.jpg" alt="Ficha empleado estilo The Office">
-        <p>Empleado del mes durante 7 meses consecutivos, logrando la posición de Vicepresidente Tercero de Almuerzo.</p>
-        <p>Es una pag que tiene como objetivo poder recorrer los personajes y episodios de la esta serie cómica que nos lleva a recorrer las aventuras de una oficina muy particular.</p>
+        <div>
+            <img src="img/fechaEmpleadoMes.jpg" alt="Ficha empleado estilo The Office">
+            <p>Empleado del mes durante 7 meses consecutivos, logrando la posición de Vicepresidente Tercero de Almuerzo.
+                Es una pag que tiene como objetivo poder recorrer los personajes y episodios de la esta serie cómica que nos lleva a recorrer las aventuras de una oficina muy particular.|
+            </p>
+        </div>
+        <body>
+            <div>
+                <form>
+                <h2>Formulario de Contacto</h2>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="comentario">Comentario:</label><br>
+                <textarea id="comentario" name="comentario" rows="4" cols="40"></textarea><br><br>
+
+                <input type="submit" value="Enviar">
+                </form>
+            </div>
+            </body>
     </main>
     <footer>
         <p>--------------------------------</p>
         <p> Derechos reservados. Esta pág es con fines educativos.</P>
-        <img src="img/logoTheOffice.jpg" alt="Logo The Office">
-        <a href="https://x.com/theoffice?lang=es">Twitter</a>
-        <a href="https://www.instagram.com/theoffice/">Instagram</a>
-        <a href="https://www.youtube.com/channel/UCa90xqK2odw1KV5wHU9WRhg">YouTube</a>
+        <img src="img/logoTheOffice.jpg" alt="Logo The Office" >
+        <a href="https://x.com/theoffice?lang=es" target="_blank"><img src="img/tw_logo.jpg" alt="Twitter" style="width:40px; border:none; box-shadow:none;"/></a>
+        <a href="https://www.instagram.com/theoffice/" target="_blank"><img src="img/instagram_logo.jpg" alt="Instagram" style="width:40px; border:none; box-shadow:none;"/></a>
+        <a href="https://www.youtube.com/channel/UCa90xqK2odw1KV5wHU9WRhg" target="_blank"> <img src="img/youtube_logo.jpg" alt="Youtube" style="width:40px; border:none; box-shadow:none;"/></a>
     </footer>
 </body>
 </html>
