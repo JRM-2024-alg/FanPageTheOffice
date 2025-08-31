@@ -54,27 +54,109 @@ img:hover {
       border-color: #0077cc;
 }
 
-nav{
-    background-color: #D9CAB3;
-    color: white;
+/* Contenedor de la botonera */
+.botonera ul {
+    list-style: none;          /* sin viñetas */
+    display: flex;             /* usamos flexbox */
+    flex-wrap: wrap;           /* que baje si no entra */
+    justify-content: center;   /* centrado */
+    gap: 20px;                 /* separación entre botones */
+    padding: 0;
+    margin: 20px 0;
+}
+
+/* Cada ítem */
+.botonera li {
+    min-width: 150px;          /* opcional: ancho mínimo */
     text-align: center;
 }
 
-nav ul{
+/* Botón */
+.botonera a {
+    display: block;            /* que ocupe todo el li */
+    background-color: #5E6472;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Hover */
+.botonera a:hover {
+    background-color: #0077cc;
+}
+
+.formulario {
     display: flex;
+    justify-content: center;    /* centra horizontal */
+    align-items: center;        /* centra vertical */
+    min-height: 100vh;          /* ocupa toda la pantalla */
 }
 
-nav ul li{
-    width: 200px;
-    height: 30px;
-    margin: 10px;
-    padding: 5px;
+.formulario form {
+    background-color: #f9f9f9;  /* fondo blanco/gris claro */
+    padding: 30px;
+    border-radius: 12px;        /* bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* sombra suave */
+    width: 350px;               /* ancho fijo */
+    text-align: left;           /* alinear labels */
 }
 
-ul {
-    list-style: none;   
-    display: flex;     
-    flex-wrap: wrap;  
-    gap: 20px;   
-    padding: 0; 
+/* Títulos */
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2F3E46;
+}
+
+/* Inputs y textarea */
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Botón */
+.formulario input[type="submit"] {
+    width: 100%;
+    background-color: #5E6472;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #0077cc;
+}
+
+.contenedor{   /*Disposición y estilo de la caja contenedora de la foto principal*/  
+display: flex;
+justify-content: center;
+}
+.foto_principal { /*Disposición y estilo de la foto principal*/  
+width: 25%;
+height: auto;
+border-radius: 30px 30px 30px 30px;
+align-self: center;
+}
+.contenedor p {
+    width: 50%;                /* ocupa la mitad del contenedor */
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;          /* más aire entre líneas */
+    color: #2F3E46;
+    text-align: justify;       /* prolijo, estilo “nota” */
+    padding: 15px;     /* espacio interno entre borde y texto */
+    margin: 0; 
 }
