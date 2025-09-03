@@ -1,25 +1,20 @@
 body{
     background-color: #A3B18A;
     font-family: Arial, sans-serif;
+    position: relative;
 }
 
 h1{
     color: #2F3E46;
     text-align: center;
-    font-size: 75px;
+    font-size: 4rem; 
 }
 
 p{
-    color:#D9CAB3;
+    color: #2F3E46;
     border: solid;
     border-color: #5E6472;
 
-}
-
-main>div{
-    display: flex;
-    align-items: center;
-    gap: 20px; 
 }
 
 header {
@@ -31,7 +26,7 @@ background-color: #5E6472;
 }
 
 *{
-    font-size: 20px;
+    font-size: 1rem;
     box-sizing: border-box;
     margin: 10;
     padding: 10;
@@ -52,6 +47,14 @@ img:hover {
       transform: scale(1.05);
       box-shadow: 0 8px 20px rgba(0,0,0,0.5);
       border-color: #0077cc;
+}
+
+.imgfotter {
+      width: 100px;
+      border: 5px solid #ccc;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+      transition: transform 0.3s, box-shadow 0.3s; 
 }
 
 /* Contenedor de la botonera */
@@ -143,6 +146,7 @@ img:hover {
 .contenedor{   /*Disposición y estilo de la caja contenedora de la foto principal*/  
 display: flex;
 justify-content: center;
+
 }
 .foto_principal { /*Disposición y estilo de la foto principal*/  
 width: 25%;
@@ -159,4 +163,63 @@ align-self: center;
     text-align: justify;       /* prolijo, estilo “nota” */
     padding: 15px;     /* espacio interno entre borde y texto */
     margin: 0; 
+}
+
+.personajes {
+    font-style: italic;
+    color: #2F3E46;
+    flex-wrap: wrap;
+    display: flex;
+    font-size: 1.5rem;
+}
+
+/* ====== MEDIA QUERIES ====== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+    .contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contenedor p {
+        width: 90%;
+    }
+    .foto_principal {
+        width: 50%;
+    }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .botonera ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .foto_principal {
+        width: 80%;
+    }
+    .contenedor p {
+        width: 100%;
+    }
+}
+
+.banner{
+    width: 70%;
+    height: auto;
+    border-radius: 30px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    flex: 1;            /* hace que crezca y empuje el footer abajo */
 }
