@@ -1,225 +1,533 @@
-body{
+* {
+    box-sizing: border-box;
+}
+
+body {
     background-color: #A3B18A;
     font-family: Arial, sans-serif;
-    position: relative;
+    margin: 0;
+    padding: 0;
+
+    /* Para que el footer quede abajo */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-h1{
-    color: #2F3E46;
+main {
+    flex: 1;
+    margin-top: 50px
+}
+
+h1 {
+    color: #D9CAB3;
     text-align: center;
-    font-size: 4rem; 
+    font-size: 4rem;
+    margin: 20px 0;
 }
 
-p{
+p {
     color: #2F3E46;
-    border: solid;
-    border-color: #5E6472;
-
+    border: 1px solid #5E6472;
+    padding: 10px;
+    border-radius: 6px;
 }
+
+/* Header */
 
 header {
-    background-color: #D9CAB3;
+    background-color: #2F3E46;
+    padding: 20px;
 }
+
+.header-left h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;        
+    justify-content: center;    
+    gap: 20px;                  
+    padding: 20px 40px;         
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;  
+}
+
+.header-right ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-right a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.banner {
+    width: 450px;    
+    height: auto;
+}
+
+/* Footer */
 
 footer {
-background-color: #5E6472;
+    background-color: #5E6472;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
 }
 
-*{
-    font-size: 1rem;
-    box-sizing: border-box;
-    margin: 10;
-    padding: 10;
-    font-family: Arial Rounded;
-    font-weight: bold;
-    text-transform: lowercase;
+.footer-left {
+    display: flex;
+    gap: 16px;
+    align-items: center;
 }
 
-img {
-      width: 300px;
-      border: 5px solid #ccc;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
-      transition: transform 0.3s, box-shadow 0.3s; 
-}
-
-img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-      border-color: #0077cc;
+.footer-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
 }
 
 .imgfotter {
-      width: 100px;
-      border: 5px solid #ccc;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
-      transition: transform 0.3s, box-shadow 0.3s; 
+    width: 100px;     
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
-/* Contenedor de la botonera */
+.footer-text {
+    color: white;
+    margin: 0;
+    font-size: 0.92rem;
+    text-align: right;
+    white-space: nowrap; 
+}
+
+/* Estilo Imagenes */
+
+img {
+    width: 300px;
+    border: 5px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Botonera */
+
 .botonera ul {
-    list-style: none;          /* sin viñetas */
-    display: flex;             /* usamos flexbox */
-    flex-wrap: wrap;           /* que baje si no entra */
-    justify-content: center;   /* centrado */
-    gap: 20px;                 /* separación entre botones */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     padding: 0;
     margin: 20px 0;
 }
 
-/* Cada ítem */
 .botonera li {
-    min-width: 150px;          /* opcional: ancho mínimo */
+    min-width: 150px;
     text-align: center;
 }
 
-/* Botón */
 .botonera a {
-    display: block;            /* que ocupe todo el li */
+    display: block;
     background-color: #5E6472;
     color: white;
-    border: none;
     padding: 10px 20px;
     border-radius: 6px;
-    cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s;
+    font-weight: bold;
 }
 
-/* Hover */
 .botonera a:hover {
-    background-color: #0077cc;
+    background-color: #A3B18A;
 }
 
+/* Formulario de Contacto */
 .formulario {
     display: flex;
-    justify-content: center;    /* centra horizontal */
-    align-items: center;        /* centra vertical */
-    min-height: 100vh;          /* ocupa toda la pantalla */
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
 }
 
 .formulario form {
-    background-color: #f9f9f9;  /* fondo blanco/gris claro */
+    background-color: #D9CAB3;
     padding: 30px;
-    border-radius: 12px;        /* bordes redondeados */
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* sombra suave */
-    width: 350px;               /* ancho fijo */
-    text-align: left;           /* alinear labels */
+    border-radius: 15px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Títulos */
 .formulario h2 {
     text-align: center;
-    margin-bottom: 20px;
+    color: #2F3E46;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.form-columns {
+    display: flex;
+    gap: 30px;
+}
+
+.form-columns .col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario label {
+    font-size: 1rem;
+    font-weight: bold;
     color: #2F3E46;
 }
 
-/* Inputs y textarea */
 .formulario input[type="text"],
 .formulario input[type="email"],
 .formulario textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #5E6472;
+    background-color: #f7f7f7;
+    color: #2F3E46;
+    font-size: 1rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08) inset;
 }
 
-/* Botón */
-.formulario input[type="submit"] {
-    width: 100%;
+.formulario textarea {
+    min-height: 150px;
+    resize: none;
+}
+
+.btn-submit {
     background-color: #5E6472;
     color: white;
+    padding: 12px;
     border: none;
-    padding: 10px;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    transition: background-color .3s, transform .2s;
 }
 
-.formulario input[type="submit"]:hover {
+.btn-submit:hover {
     background-color: #0077cc;
+    transform: scale(1.03);
 }
 
-.contenedor{   /*Disposición y estilo de la caja contenedora de la foto principal*/  
-display: flex;
-justify-content: center;
+input:valid,
+textarea:valid {
+    border: 2px solid #5E6472;
+}
 
+/* Responsive para el formulario */
+@media (max-width: 700px) {
+    .form-columns {
+        flex-direction: column;
+    }
 }
-.foto_principal { /*Disposición y estilo de la foto principal*/  
-width: 25%;
-height: auto;
-border-radius: 30px 30px 30px 30px;
-align-self: center;
+
+/* Tarjeta de presentación */
+
+.card-presentacion {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color:#D9CAB3;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  max-width: 850px;
+  margin: 0 auto;
 }
-.contenedor p {
-    width: 50%;                /* ocupa la mitad del contenedor */
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.6;          /* más aire entre líneas */
-    color: #2F3E46;
-    text-align: justify;       /* prolijo, estilo “nota” */
-    padding: 15px;     /* espacio interno entre borde y texto */
-    margin: 0; 
+
+.foto-perfil {
+  width: 200px;
+  height: 350px;
+  object-fit: cover;
 }
+
+.card-presentacion .info h3 {
+  font-size: 1.8rem;
+  margin-bottom: .2rem;
+  color: black;
+}
+
+.card-presentacion .puesto {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: black;
+}
+
+.card-presentacion .antiguedad {
+  font-size: .95rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.card-presentacion h4 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.card-presentacion ul {
+  margin-top: .5rem;
+  padding-left: 1.2rem;
+}
+
+.card-presentacion ul li {
+  margin-bottom: .4rem;
+}
+
+/* Personajes */
 
 .personajes {
     font-style: italic;
     color: #2F3E46;
-    flex-wrap: wrap;
     display: flex;
+    flex-wrap: wrap;
     font-size: 1.5rem;
+    gap: 10px;
 }
 
-/* ====== MEDIA QUERIES ====== */
+.contenedor-personajes {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #D9CAB3; 
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
-/* Tablet */
-@media (max-width: 1024px) {
-    h1 {
-        font-size: 3rem;
-    }
-    .contenedor {
+.contenedor-personajes h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2F3E46;
+    margin-bottom: 20px;
+}
+
+.personaje-detalle {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contenedor-personajes.derecha .personaje-detalle {
+    flex-direction: row-reverse;
+}
+
+.personaje-foto {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #2F3E46;
+}
+
+.personaje-texto {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #2F3E46;
+    flex: 1;
+}
+
+/* Episodios */
+
+.titulo-temporada {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-left: 10%;
+}
+
+.episodios-card {
+  background: #D9CAB3;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 90%;
+  margin: 0 auto 40px auto;
+}
+
+.episodios-card img {
+  width: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 3px solid #2F3E46;
+}
+
+.episodios-lista {
+  list-style: none;
+  padding: 50;
+  margin-top: 30px;
+  min-width: 130px;
+}
+
+.episodios-lista li a {
+  color: #2b5f9e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.episodios-lista li a:hover {
+  text-decoration: underline;
+}
+
+.episodios-texto {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #2F3E46;
+    flex: 1;
+    margin-top: 35px;
+}
+
+.episodio-link {
+  min-width: 120px;
+  font-weight: 600;
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.episodio-link a {
+  color: #2b5f9e;
+  text-decoration: none;
+}
+
+.episodio-link a:hover {
+  text-decoration: underline;
+}
+
+/* Para ser responsive */
+
+@media (max-width: 900px) {
+
+    .header {
         flex-direction: column;
         text-align: center;
+        gap: 10px;
     }
-    .contenedor p {
-        width: 90%;
-    }
-    .foto_principal {
-        width: 50%;
-    }
-}
 
-/* Móvil */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2rem;
+    .header-left {
+        flex-direction: column;
+        align-items: center;
     }
+
+    .banner {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
     .botonera ul {
         flex-direction: column;
         gap: 10px;
     }
-    .foto_principal {
-        width: 80%;
+
+    .episodios-card {
+        flex-direction: column;
+        text-align: center;
     }
-    .contenedor p {
+
+    .episodios-card img {
         width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .personaje-detalle {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contenedor-personajes.derecha .personaje-detalle {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .personaje-foto {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .card-presentacion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-presentacion img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .form-columns {
+        flex-direction: column;
+        gap: 20px;
     }
 }
+@media (max-width: 600px) {
 
-.banner{
-    width: 70%;
-    height: auto;
-    border-radius: 30px;
-    flex-shrink: 0;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    h1 {
+        font-size: 1.7rem;
+    }
 
-main {
-    flex: 1;            /* hace que crezca y empuje el footer abajo */
+    .titulo-temporada {
+        font-size: 1.3rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    p, li {
+        font-size: 1rem;
+    }
+
+    .contenedor-personajes.derecha .personaje-detalle {
+        flex-direction: column;
+        text-align: center;
+    }
 }
